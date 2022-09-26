@@ -1,17 +1,27 @@
 .footer {
   background-color: var(--secondary-background-color);
   padding: 60px 0;
+  text-align: center;
+
+  @media screen and (min-width: 1200px) {
+    text-align: start;
+  }
 }
 
-.footer--baseline {
-  display: flex;
-  align-items: baseline;
+@media screen and (min-width: 768px) {
+  .footer--baseline {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    row-gap: 60px;
+  }
 }
 
 .footer-address {
   display: flex;
   flex-direction: column;
-  gap: 9px;
+  gap: 8px;
 }
 
 .footer-address__map-link {
@@ -38,8 +48,10 @@
   }
 }
 
-.footer-join {
-  margin-left: 70px;
+@media screen and (min-width: 1200px) {
+  .footer-join {
+    margin-left: 70px;
+  }
 }
 
 .footer-join__text {
@@ -48,12 +60,18 @@
   line-height: 1.14;
   text-transform: uppercase;
   color: var(--primary-background-color);
-  margin-top: 0%;
+  margin-top: 60px;
   margin-bottom: 20px;
+
+  @media screen and (min-width: 1200px) {
+    margin-top: 0;
+  }
 }
 
 .footer-lists {
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 10px;
 }
 
@@ -63,8 +81,10 @@
   height: 44px;
 }
 
-.subscribe-form {
-  margin-left: auto;
+@media screen and (min-width: 1200px) {
+  .subscribe-form {
+    margin-left: auto;
+  }
 }
 
 .subscribe-form__text {
@@ -73,17 +93,27 @@
   line-height: 1.14;
   text-transform: uppercase;
   color: var(--primary-background-color);
-  margin-top: 0;
+  margin-top: 60px;
   margin-bottom: 20px;
+
+  @media screen and (min-width: 1200px) {
+    margin-top: 0;
+  }
 }
 
 .form-field {
   display: flex;
-  gap: 12px;
+  flex-direction: column;
+  gap: 20px;
+
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
+    gap: 12px;
+  }
 }
 
 .form-field__input {
-  width: 358px;
+  width: 100%;
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -99,5 +129,13 @@
     font-size: 16px;
     line-height: 1.25;
     color: rgba(255, 255, 255, 0.6);
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 450px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 358px;
   }
 }

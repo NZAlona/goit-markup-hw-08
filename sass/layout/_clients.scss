@@ -1,12 +1,23 @@
 .section-clients {
-  @extend %align;
+  display: flex;
+  flex-wrap: wrap;
   gap: 30px;
 }
 
 .section-clients__item {
-  flex-basis: calc((100% - 150px) / 6);
-  max-width: 170px;
+  flex-basis: calc((100% - 30px) / 2);
+  max-width: 210px;
   height: 92px;
+
+  @media screen and (min-width: 768px) {
+    flex-basis: calc((100% - 60px) / 3);
+    max-width: 226px;
+
+    @media screen and (min-width: 1200px) {
+      flex-basis: calc((100% - 150px) / 6);
+      max-width: 170px;
+    }
+  }
 }
 
 .clients-icon {

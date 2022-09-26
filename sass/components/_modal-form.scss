@@ -1,11 +1,15 @@
 .form-title {
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
   text-align: center;
   color: var(--title-text-color);
   margin-top: 0;
   margin-bottom: 12px;
+
+  @media screen and (min-width: 1200px) {
+    line-height: 1.15;
+  }
 }
 
 .modal-form {
@@ -76,14 +80,22 @@
 }
 
 .terms-conditions {
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.16;
   letter-spacing: 0.01em;
   color: var(--primary-text-color);
-  width: 425px;
-  height: 24px;
+
   margin-bottom: 30px;
   @extend %align;
+  justify-content: flex-start;
+  align-items: center;
+
+  @media screen and (min-width: 1200px) {
+    width: 425px;
+    font-size: 14px;
+    line-height: 1.71;
+    justify-content: center;
+  }
 }
 
 .terms-conditions__check-tick {
