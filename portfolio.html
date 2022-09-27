@@ -21,7 +21,7 @@
     <header class="page-header">
       <div class="container page-header--horisontal">
         <nav class="page-navigation">
-          <a href="./index.html" class="logo"><span class="logo logo--blue">Web</span>Studio</a>
+          <a href="./index.html" class="logo"> <span class="logo logo--blue">Web</span>Studio </a>
 
           <ul class="site-nav list">
             <li class="site-nav__item">
@@ -64,9 +64,75 @@
             >
           </li>
         </ul>
+        <button
+          type="button"
+          class="menu-button js-open-menu"
+          data-menu-button
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg width="40" height="40" aria-label="Перемикач мобiльного меню">
+            <use href="./images/icons.svg#menu" class="menu-button__icon-menu"></use>
+          </svg>
+        </button>
       </div>
     </header>
 
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <div class="container mobile-container">
+        <button class="menu-button menu-button--positioning js-close-menu">
+          <svg
+            width="40"
+            height="40"
+            aria-label="Перемикач мобiльного меню"
+            class="menu-button__icon-cross"
+          >
+            <use href="./images/icons.svg#cross"></use>
+          </svg>
+        </button>
+
+        <ul class="mobile-menu list">
+          <li class="mobile-menu__item">
+            <a href="./index.html" class="mobile-menu__link">Студія</a>
+          </li>
+          <li class="mobile-menu__item">
+            <a href="./portfolio.html" class="mobile-menu__link modile-menu__link--current"
+              >Портфоліо</a
+            >
+          </li>
+          <li class="mobile-menu__item">
+            <a href="#" class="mobile-menu__link">Контакти</a>
+          </li>
+        </ul>
+
+        <div>
+          <ul class="mobile-menu-contacts list">
+            <li class="">
+              <a href="tel:+380961111111" class="mobile-menu-contacts__tel">+38 096 111 11 11</a>
+            </li>
+            <li class="">
+              <a href="malito:info@devstudio.com" class="mobile-menu-contacts__email">
+                info@devstudio.com</a
+              >
+            </li>
+          </ul>
+          <ul class="mobile-menu-links list">
+            <li class="mobile-menu-links__item">
+              <a href="#" class="mobile-social-link">Instagram</a>
+            </li>
+            <li class="mobile-menu-links__item">
+              <a href="#" class="mobile-social-link">Twitter</a>
+            </li>
+            <li class="mobile-menu-links__item">
+              <a href="#" class="mobile-social-link">Facebook</a>
+            </li>
+            <li class="mobile-menu-links__item">
+              <a href="#" class="mobile-social-link">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
     <main>
       <section class="section">
         <div class="container">
@@ -83,7 +149,21 @@
             <li class="cards-set__item">
               <a href="#" class="product">
                 <div class="product__wrapper">
-                  <img src="./images/pic2/img(01).jpg" alt="ноутбук" width="370" />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/tablet/laptop-tablet.jpg   1x,
+                        ./images/portfolio/tablet/laptop-tablet2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./images/portfolio/laptop.jpg 1x, ./images/portfolio/laptop2x.jpg 2x"
+                      media="(max-width: 767px)"
+                    />
+                    <img src="./images/pic2/img(01).jpg" alt="ноутбук" width="" />
+                  </picture>
+
                   <p class="product__text-overlay">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                     Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
@@ -91,7 +171,7 @@
                   </p>
                 </div>
 
-                <div class="product__meta">
+                <div class="product__meta product__align">
                   <h2 class="product__title">Технокряк</h2>
                   <p class="product__name">Веб-сайт</p>
                 </div>
@@ -101,11 +181,25 @@
             <li class="cards-set__item">
               <a href="#" class="product">
                 <div class="product__wrapper">
-                  <img
-                    src="./images/pic2/img(02).jpg"
-                    alt="чоловіки грають у баскетбол"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/tablet/ball-tablet.jpg   1x,
+                        ./images/portfolio/tablet/ball-tablet2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="./images/portfolio/ball.jpg 1x, ./images/portfolio/ball2x.jpg 2x"
+                      media="(max-width:767px)"
+                    />
+                    <img
+                      src="./images/pic2/img(02).jpg"
+                      alt="чоловіки грають у баскетбол"
+                      width=""
+                    />
+                  </picture>
+
                   <p class="product__text-overlay">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                     Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
@@ -115,7 +209,7 @@
 
                 <div class="product__meta">
                   <h2 class="product__title">
-                    Постер <span lang="en">Orlean vs Golden Star</span>
+                    Постер <span lang="en"> New Orlean vs Golden Star</span>
                   </h2>
                   <p class="product__name">Дизайн</p>
                 </div>
@@ -125,7 +219,24 @@
             <li class="cards-set__item">
               <a href="#" class="product">
                 <div class="product__wrapper">
-                  <img src="./images/pic2/img(03).jpg" alt="логотип ресторану" width="370" />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/tablet/seafood-tablet.jpg   1x,
+                        ./images/portfolio/tablet/seafood-tablet2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/seafood.jpg   1x,
+                        ./images/portfolio/seafood2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img src="./images/pic2/img(03).jpg" alt="логотип ресторану" width="" />
+                  </picture>
+
                   <p class="product__text-overlay">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                     Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
@@ -142,7 +253,24 @@
             <li class="cards-set__item">
               <a href="#" class="product">
                 <div class="product__wrapper">
-                  <img src="./images/pic2/img(04).jpg" alt="навушники" width="370" />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/tablet/earpod-tablet.jpg   1x,
+                        ./images/portfolio/tablet/earpod-tablet2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/earpods.jpg   1x,
+                        ./images/portfolio/earpods2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img src="./images/pic2/img(04).jpg" alt="навушники" width="" />
+                  </picture>
+
                   <p class="product__text-overlay">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                     Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
@@ -159,7 +287,21 @@
             <li class="cards-set__item">
               <a href="#" class="product">
                 <div class="product__wrapper">
-                  <img src="./images/pic2/img(05).jpg" alt="дві коробки" width="370" />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/tablet/box-tablet.jpg   1x,
+                        ./images/portfolio/tablet/box-tablet2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./images/portfolio/box.jpg 1x, ./images/portfolio/box2x.jpg 2x"
+                      media="(max-width: 767px)"
+                    />
+                    <img src="./images/pic2/img(05).jpg" alt="дві коробки" width="" />
+                  </picture>
+
                   <p class="product__text-overlay">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                     Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
@@ -175,7 +317,21 @@
             <li class="cards-set__item">
               <a href="#" class="product">
                 <div class="product__wrapper">
-                  <img src="./images/pic2/img(06).jpg" alt="монітор" width="370" />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/tablet/screen-tablet.jpg   1x,
+                        ./images/portfolio/tablet/screen-tablet2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./images/portfolio/screen.jpg 1x, ./images/portfolio/screen2x.jpg 2x"
+                      media="(max-width:767px)"
+                    />
+                    <img src="./images/pic2/img(06).jpg" alt="монітор" width="" />
+                  </picture>
+
                   <p class="product__text-overlay">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                     Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
@@ -192,7 +348,24 @@
             <li class="cards-set__item">
               <a href="#" class="product">
                 <div class="product__wrapper">
-                  <img src="./images/pic2/img(07).jpg" alt="журнал" width="370" />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/tablet/limited-tablet.jpg   1x,
+                        ./images/portfolio/tablet/limited-tablet2x.jpg 2x
+                      "
+                      media="(min-width: 767px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/limited.jpg   1x,
+                        ./images/portfolio/limited2x.jpg 2x
+                      "
+                      media="(max-width:767px)"
+                    />
+                    <img src="./images/pic2/img(07).jpg" alt="журнал" width="" />
+                  </picture>
+
                   <p class="product__text-overlay">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                     Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
@@ -208,7 +381,21 @@
             <li class="cards-set__item">
               <a href="#" class="product">
                 <div class="product__wrapper">
-                  <img src="./images/pic2/img(08).jpg" alt="етикетка" width="370" />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/tablet/lab-tablet.jpg   1x,
+                        ./images/portfolio/tablet/lab-tablet2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="./images/portfolio/lab.jpg 1x, ./images/portfolio/lab2x.jpg 2x"
+                      media="(max-width:767px)"
+                    />
+                    <img src="./images/pic2/img(08).jpg" alt="етикетка" width="" />
+                  </picture>
+
                   <p class="product__text-overlay">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                     Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
@@ -224,11 +411,28 @@
             <li class="cards-set__item">
               <a href="#" class="product">
                 <div class="product__wrapper">
-                  <img
-                    src="./images/pic2/img(09).jpg"
-                    alt="чоловік друкує на ноутбуці"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/tablet/business-tablet.jpg   1x,
+                        ./images/portfolio/tablet/business-tablet2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/business.jpg   1x,
+                        ./images/portfolio/business2x.jpg 2x
+                      "
+                      media="(max-width:767px)"
+                    />
+                    <img
+                      src="./images/pic2/img(09).jpg"
+                      alt="чоловік друкує на ноутбуці"
+                      width=""
+                    />
+                  </picture>
+
                   <p class="product__text-overlay">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                     Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
@@ -332,5 +536,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
