@@ -1131,6 +1131,12 @@ img {
     max-width: 354px;
   }
 }
+@media screen and (min-width: 1200px) {
+  .cards-set__item {
+    flex-basis: calc((100% - 60px) / 3);
+    max-width: 370px;
+  }
+}
 
 .product {
   display: flex;
@@ -1181,6 +1187,11 @@ img {
 
 .product__align {
   padding-bottom: 56px;
+}
+@media screen and (min-width: 1200px) {
+  .product__align {
+    padding-bottom: 20px;
+  }
 }
 
 .product__title {
