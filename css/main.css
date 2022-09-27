@@ -76,19 +76,19 @@ img {
 
 @media screen and (min-width: 480px) {
   .container {
-    max-width: 480px;
+    width: 480px;
     margin-left: auto;
     margin-right: auto;
   }
 }
 @media screen and (min-width: 768px) {
   .container {
-    max-width: 768px;
+    width: 768px;
   }
 }
 @media screen and (min-width: 1200px) {
   .container {
-    max-width: 1200px;
+    width: 1200px;
   }
 }
 .logo {
@@ -627,6 +627,7 @@ img {
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/hero-mob.jpg");
   background-position: center;
   background-repeat: no-repeat;
+  background-size: cover;
 }
 @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .section-overlay {
@@ -875,7 +876,7 @@ img {
   display: flex;
   justify-content: center;
   gap: 10px;
-  padding-top: 16px;
+  margin-top: 16px;
 }
 
 .section-clients {
@@ -1014,7 +1015,7 @@ img {
   margin-top: 60px;
   margin-bottom: 20px;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .subscribe-form__text {
     margin-top: 0;
   }
@@ -1128,7 +1129,7 @@ img {
 @media screen and (min-width: 768px) {
   .cards-set__item {
     flex-basis: calc((100% - 30px) / 2);
-    max-width: 354px;
+    maax-width: 354px;
   }
 }
 @media screen and (min-width: 1200px) {
