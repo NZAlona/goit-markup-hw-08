@@ -982,7 +982,7 @@ img {
   margin-top: 60px;
   margin-bottom: 20px;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .footer-join__text {
     margin-top: 0;
   }
@@ -1112,7 +1112,6 @@ img {
 .cards-set {
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 30px;
 }
 @media screen and (min-width: 768px) {
@@ -1175,24 +1174,11 @@ img {
 }
 
 .product__meta {
-  padding-top: 20px;
-  padding-right: 24px;
-  padding-bottom: 20px;
-  padding-left: 24px;
   padding: 20px 24px;
   border-bottom: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
   border-left: 1px solid #eeeeee;
   flex-grow: 1;
-}
-
-.product__align {
-  padding-bottom: 56px;
-}
-@media screen and (min-width: 1200px) {
-  .product__align {
-    padding-bottom: 20px;
-  }
 }
 
 .product__title {
