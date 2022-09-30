@@ -226,7 +226,12 @@ img {
 
 .mobile-menu-links {
   display: flex;
-  gap: 20px;
+  gap: 10px;
+}
+@media screen and (max-width: 479px) {
+  .mobile-menu-links {
+    flex-wrap: wrap;
+  }
 }
 
 .mobile-social-link {
